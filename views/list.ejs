@@ -1,0 +1,23 @@
+<%- include("header") -%>
+    <div class="box" id="heading" >
+        <h1>
+            <%=pageType%>
+        </h1>
+    </div>
+    
+    <div class="box">
+        <% for(let i=0;i<ITEMS.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                 <p><%=ITEMS[i] %> </p>
+            </div>
+            
+      <%  }     %>
+      <form action="/" method="post">
+        <input type="text" name="newToDo" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="btnValue" value="<%=pageType%>">+</button>
+    </form>
+    </div>
+      
+    <%- include("footer") -%>   
+   
